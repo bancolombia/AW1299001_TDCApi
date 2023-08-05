@@ -1,0 +1,2 @@
+rootProject.name = 'API.tdc.api'
+include 'API.tdc.api.service', 'API.tdc.api.web'

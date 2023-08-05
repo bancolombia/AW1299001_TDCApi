@@ -1,0 +1,22 @@
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'
+
+project.webAppDirName = 'src/main/webapp'
+
+description = 'API.tdc.api.web'
+
+dependencies {
+	//Projectos para compilar
+	compile project(':API.tdc.api.service')
+	// Librerias de pruebas
+	testCompile group: 'junit', name: 'junit', version: '4.12'
+	testCompile group: 'org.mockito', name: 'mockito-all', version: '1.10.19'
+	testCompile 'org.glassfish.jersey.core:jersey-common:2.22.2'
+}
+
+war {
+  manifest {
+    attributes("Class-Path": configurations.compile.collect { it.getName() }.join(' '),
+    		   "DisableIBMJAXWSEngine": true)
+  }
+}

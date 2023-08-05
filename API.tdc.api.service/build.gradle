@@ -1,0 +1,42 @@
+description = 'API.tdc.api.service'
+apply plugin: 'eclipse'
+
+dependencies {	
+
+	compile group: 'javax', name: 'javaee-api', version: '8.0.1'
+	compile group: 'org.glassfish', name: 'javax.json', version: '1.0.4'
+	compile "com.sun.jersey:jersey-client:1.19"
+	implementation 'org.apache.velocity:velocity-engine-core:2.3'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.1'
+	implementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.14.2'
+    
+	compile "co.com.bancolombia:LI.lib.commons:2.0.4"
+	compile "co.com.bancolombia:LI.lib.dto:1.0.47"
+	compile "co.com.bancolombia:AW1299001.lib.AuthClienteOTP:1.0.6"
+	compile "co.com.bancolombia:AW1299001.lib.GeneracionToken:1.0.6"
+	compile "co.com.bancolombia:AW1299001.lib.GenerarOTP:1.0.8"
+	compile "co.com.bancolombia:AW1299001.lib.ApiAutenticacion:1.0.40"
+	compile "co.com.bancolombia:AW1299001.lib.GestionCreditoConsumo:1.0.5"
+
+	compile group: 'org.apache.httpcomponents', name: 'httpcore', version: '4.4.6'
+	compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.13'
+	implementation(group: 'co.com.bancolombia', name: 'AW0937001_VTD_Libreria_Persistencia', version: '4.2.4')
+    implementation( group: 'co.com.bancolombia', name: 'VTD.librerias.comunes', version: '1.8.0')
+	compile group: 'org.apache.pdfbox', name: 'pdfbox', version: '2.0.25'
+	compile group: 'com.itextpdf', name: 'itextpdf', version: '5.5.13.1'
+	compile group: 'com.itextpdf.tool', name: 'xmlworker', version: '5.5.13.1'
+	implementation group: 'com.fasterxml.jackson.jaxrs', name: 'jackson-jaxrs-json-provider', version: '2.13.3'
+	compile group: 'commons-io', name: 'commons-io', version: '2.11.0'
+	compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.17.1'
+	compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.17.1'
+
+ 	// Librerias de pruebas
+    testImplementation(group: 'junit', name: 'junit', version: '4.12')
+	testCompile group: 'org.mockito', name: 'mockito-core', version: '2.15.0'
+	testCompile group: 'org.hamcrest', name: 'java-hamcrest', version: '2.0.0.0'
+
+	testCompile 'org.glassfish.jersey.core:jersey-common:2.22.2'
+	compile 'joda-time:joda-time:2.10.7'
+	
+}
+
